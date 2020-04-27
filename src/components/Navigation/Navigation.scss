@@ -1,0 +1,15 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 3%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2rem;
+}
