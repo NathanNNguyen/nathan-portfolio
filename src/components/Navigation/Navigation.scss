@@ -5,11 +5,16 @@
   flex-direction: column;
   height: 100vh;
   width: 3%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgb(0, 0, 0);
 }
 
 .link {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
   font-size: 2rem;
+
+  :hover {
+    transform: translateY(-.1rem);
+    transition: all .2s;
+  }
 }
