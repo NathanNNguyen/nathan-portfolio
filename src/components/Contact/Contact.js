@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './Contact.scss';
+import styles from './Contact.module.scss';
 
 function Contact() {
   return (
-    <div className="contact">
+    <div className={styles.contact}>
       <h1>Contact</h1>
     </div>
   );

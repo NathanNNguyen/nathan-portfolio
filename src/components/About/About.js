@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './About.scss';
+import styles from './About.module.scss';
 
 function About() {
   return (
-    <div className="about">
+    <div className={styles.about}>
       <h1>About</h1>
     </div>
   );

@@ -1,0 +1,54 @@
+.home {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  // animation: pageLoad 1s;
+  background: #EB5757;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  .textArea {
+    position: relative;
+    z-index: 2;
+
+    // Animation for text
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.1rem solid black;
+    animation: typing 4s steps(65, end), blink-caret 1s step-end infinite;
+
+    .summary {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .title {
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      
+    }
+  }
+}
+
+@keyframes pageLoad {
+  from {
+      opacity: .5;
+      transform: scale3d(0.9, 0.9, 0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  100% { border-color: transparent; }
+}
