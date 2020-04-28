@@ -1,12 +1,15 @@
 import React from 'react';
+import Wrapper from '../Wrapper/Wrapper.js';
 
 import styles from './About.module.scss';
 
 function About() {
   return (
-    <div className={styles.about}>
-      <h1>About</h1>
-    </div>
+    <Wrapper>
+      <div className={styles.about}>
+        <h1>About me</h1>
+      </div>
+    </Wrapper>
   );
 }
 
