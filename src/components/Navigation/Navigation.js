@@ -1,20 +1,43 @@
 import React from 'react';
-import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
-import AppsOutlinedIcon from '@material-ui/icons/AppsOutlined';
-import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
-import ContactMailOutlinedIcon from '@material-ui/icons/ContactMailOutlined';
+import { NavLink } from 'react-router-dom';
 
 import styles from './Navigation.module.scss';
 
-function Navigation() {
+const navigationItems = [
+  {
+    icon: 'fas fa-home',
+    text: 'Home',
+    route: '/'
+  },
+  {
+    icon: 'fas fa-user',
+    text: 'About',
+    route: '/about'
+  },
+  {
+    icon: 'fas fa-fire',
+    text: 'Projects',
+    route: '/project'
+  },
+  {
+    icon: 'fas fa-envelope',
+    text: 'Contact',
+    route: '/contact'
+  }
+];
+
+const Navigation = () => {
+
+  const links = navigationItems.map(item => {
+    return <NavLink to={item.route} className={styles.link}><i className={item.icon} /> <span>{item.text}</span></NavLink>
+  })
   return (
     <div className={styles.navigation}>
-      <a className={styles.link} href='/'><HomeOutlinedIcon /></a>
-      <a className={styles.link} href='/about'><InfoOutlinedIcon /></a>
-      <a className={styles.link} href='/project'><AppsOutlinedIcon /></a>
-      <a className={styles.link} href='/contact'><ContactMailOutlinedIcon /></a>
+      <span>{links}</span>
     </div>
   );
 }
+
+
 
 export default Navigation;
