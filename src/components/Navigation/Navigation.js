@@ -29,7 +29,12 @@ const navigationItems = [
 const Navigation = () => {
 
   const links = navigationItems.map(item => {
-    return <NavLink to={item.route} className={styles.link}><i className={item.icon} /> <span>{item.text}</span></NavLink>
+    return (
+      <NavLink to={item.route} className={styles.link}>
+        <i className={item.icon} />
+        <span>{item.text}</span>
+      </NavLink>
+    )
   })
   return (
     <div className={styles.navigation}>

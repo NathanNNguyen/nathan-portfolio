@@ -10,11 +10,11 @@ function Home() {
         <div className={styles.textArea}>
           <div className={styles.summary}>
             <h1>Hi,
-          <br />
+              <br />
               my name is Nathan Nguyen,
-          <br />
+              <br />
               web developer.
-          </h1>
+            </h1>
             <p className={styles.title}>
               Fullstack Developer - HTML / CSS / JavaScript / React / NodeJS
           </p>

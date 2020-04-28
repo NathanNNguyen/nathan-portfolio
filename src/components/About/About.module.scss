@@ -1,3 +1,23 @@
 .about {
-  
+
+  .textArea {
+    position: relative;
+    z-index: 2;
+
+    .summary {
+      font-size: 25px;
+      font-weight: 500;
+
+      h2 {
+        margin: 60px;
+      }
+
+      .text {
+        margin: 30px 60px;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+      }
+    }
+
+  }
 }
