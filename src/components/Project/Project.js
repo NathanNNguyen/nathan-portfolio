@@ -3,7 +3,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
@@ -18,12 +17,9 @@ import styles from './Project.module.scss';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 310,
     background: 'rgba(255, 255, 255, 0.7)',
-    margin: '60px 0 60px 60px'
-  },
-  media: {
-    height: 200,
+    margin: '60px'
   },
 });
 
@@ -31,14 +27,10 @@ function Project() {
   const classes = useStyles();
   return (
     <div className={styles.project}>
-      {projects.map(project => {
+      {projects.map((project, id) => {
         return (
-          <Card className={classes.root}>
-            <CardMedia
-              className={classes.media}
-              image={project.img}
-              title={project.name}
-            />
+          <Card className={classes.root} key={id}>
+            <img src={project.img} alt='Project img' />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
                 {project.name}
@@ -47,11 +39,17 @@ function Project() {
                 {project.desc}
               </Typography>
             </CardContent>
-            <Button size="medium" color="transparent">
-              <a href={project.live} target="_blank" rel="noopener noreferrer"><i class="fas fa-eye"></i></a>
+            <Button size="small" className={styles.btn}>
+              <a href={project.live} target="_blank" rel="noopener noreferrer">
+                <i className="fas fa-eye"></i>
+                <span className={styles.span}>Live</span>
+              </a>
             </Button>
-            <Button size="large" color="transparent">
-              <a href={project.github} target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i></a>
+            <Button size="small" className={styles.btn}>
+              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                <i className="fas fa-code"></i>
+                <span className={styles.span}>Code</span>
+              </a>
             </Button>
           </Card>
         )
@@ -97,7 +95,8 @@ const projects = [
     live: 'https://nn-natours.netlify.app/',
     img: natoursImg,
     desc: 'A simple project to showcase frontend skills (HTML/CSS)'
-  }, {
+  },
+  {
     name: 'Roll the dice',
     github: 'https://github.com/NathanNNguyen/DOM-Game',
     live: 'https://nn-rollthedice.netlify.app/',
