@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=La+Belle+Aurore');
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 5%;
+    min-height: 90%;
+    box-sizing: border-box;
+
+    // animation: pageLoad 1s;
+    background: #EB5757;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    .tags {
+        font-family: 'La Belle Aurore', cursive;
+        font-size: 20px;
+        color: #000000;
+    }
+}
