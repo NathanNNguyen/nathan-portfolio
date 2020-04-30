@@ -1,10 +1,13 @@
 import React from 'react';
+import cx from 'classnames';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
+import Grow from '@material-ui/core/Grow';
 
 import covidImg from '../../assets/images/covid-tracker.png';
 import domImg from '../../assets/images/dom-game.png';
@@ -19,38 +22,52 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 310,
     background: 'rgba(255, 255, 255, 0.7)',
-    margin: '60px'
+    margin: '60px',
+    boxShadow: '5px 10px 10px rgba(0, 0, 0, 0.7)'
   },
+  paper: {
+    width: '100%',
+    height: '100%'
+  }
 });
 
 function Project() {
   const classes = useStyles();
+  const [checked, setChecked] = React.useState(true);
   return (
     <div className={styles.project}>
       {projects.map((project, id) => {
         return (
-          <Card className={classes.root} key={id}>
-            <img src={project.img} alt='Project img' />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                {project.name}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {project.desc}
-              </Typography>
-            </CardContent>
-            <Button size="small" className={styles.btn}>
-              <a href={project.live} target="_blank" rel="noopener noreferrer">
-                <i className="fas fa-eye"></i>
-                <span className={styles.span}>Live</span>
-              </a>
-            </Button>
-            <Button size="small" className={styles.btn}>
-              <a href={project.github} target="_blank" rel="noopener noreferrer">
-                <i className="fas fa-code"></i>
-                <span className={styles.span}>Code</span>
-              </a>
-            </Button>
+          <Card className={cx(classes.root, styles.card)} key={id}>
+            <Grow
+              in={checked}
+              style={{ transformOrigin: '1 0 0' }}
+              {...(checked ? { timeout: 1000 } : 'Loading project...')}
+            >
+              <Paper elevation={4} className={classes.paper}>
+                <img src={project.img} alt='Project img' />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {project.name}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    {project.desc}
+                  </Typography>
+                </CardContent>
+                <Button size="small" className={styles.btn}>
+                  <a href={project.live} target="_blank" rel="noopener noreferrer">
+                    <i className="fas fa-eye"></i>
+                    <span className={styles.span}>Live</span>
+                  </a>
+                </Button>
+                <Button size="small" className={styles.btn}>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <i className="fas fa-code"></i>
+                    <span className={styles.span}>Code</span>
+                  </a>
+                </Button>
+              </Paper>
+            </Grow>
           </Card>
         )
       })}
@@ -66,7 +83,7 @@ const projects = [
     github: 'https://github.com/bw-wlj-2/Frontend',
     live: 'https://simply-fit.netlify.app/',
     img: wljImg,
-    desc: 'Users are allowed to log in and keep track of their personal workout records (React/Redux)'
+    desc: 'An app that allows users to keep track of their personal workout (React/Redux)'
   },
   {
     name: 'Covid Tracker',
@@ -87,7 +104,7 @@ const projects = [
     github: 'https://github.com/NathanNNguyen/nasa-photo-of-the-day',
     live: 'https://nn-nasa.netlify.app/',
     img: nasaImg,
-    desc: 'An app that allows users to see photos of nasa everyday including descriptions about them (React)'
+    desc: 'An app that allows users to see nasa data everyday (React)'
   },
   {
     name: 'Natours',
@@ -101,6 +118,6 @@ const projects = [
     github: 'https://github.com/NathanNNguyen/DOM-Game',
     live: 'https://nn-rollthedice.netlify.app/',
     img: domImg,
-    desc: 'Players take turn to roll the dice, whoever hit 100 points first would win the game (DOM)'
+    desc: 'A game that let players taking turn to roll the dice until one hits 100 points (DOM)'
   }
 ]

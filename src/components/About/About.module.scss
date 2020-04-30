@@ -1,4 +1,5 @@
 .about {
+  animation: pageLoad 1s;
 
   .textArea {
     position: relative;
@@ -18,5 +19,16 @@
         letter-spacing: 1.5px;
       }
     }
+  }
+}
+
+@keyframes pageLoad {
+  from {
+      opacity: 0.5;
+      transform: scale3d(0.5, 0.5, 0.5);
+  }
+  to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
   }
 }
