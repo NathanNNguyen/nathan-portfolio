@@ -1,11 +1,16 @@
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  width: 5%;
+  width: 4%;
   background: rgb(0, 0, 0);
+
+  img {
+    width: 40%;
+    margin-top: 10px;
+  }
 
   a {
     display: block;
@@ -16,7 +21,7 @@
     position: relative;
 
     span,
-    i {
+    i,a {
         display: block;
         position: absolute;
         width: 100%;
@@ -34,7 +39,7 @@
     }
 
     &:hover,
-    &.active {
+    &:active {
       color: rgba(255, 255, 255, .8);
     }
 

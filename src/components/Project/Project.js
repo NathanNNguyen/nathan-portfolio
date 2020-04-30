@@ -41,8 +41,8 @@ function Project() {
           <Card className={cx(classes.root, styles.card)} key={id}>
             <Grow
               in={checked}
-              style={{ transformOrigin: '1 0 0' }}
-              {...(checked ? { timeout: 1000 } : 'Loading project...')}
+              style={{ transformOrigin: '0 0 1' }}
+              {...(checked ? { timeout: 1500 } : 'Loading project...')}
             >
               <Paper elevation={4} className={classes.paper}>
                 <img src={project.img} alt='Project img' />
@@ -118,6 +118,6 @@ const projects = [
     github: 'https://github.com/NathanNNguyen/DOM-Game',
     live: 'https://nn-rollthedice.netlify.app/',
     img: domImg,
-    desc: 'A game that let players taking turn to roll the dice until one hits 100 points (DOM)'
+    desc: 'A game allows players taking turn to roll the dice until one hits 100 points (DOM)'
   }
 ]
