@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Logo from '../Logo/Logo.js';
 import logo from '../../assets/images/favicon.png';
 
 import styles from './Navigation.module.scss';
@@ -40,6 +41,14 @@ const networks = [
   }
 ]
 
+const logos = [
+  {
+    icon: { logo },
+    text: 'Nathan',
+    route: '/'
+  }
+]
+
 const Navigation = () => {
 
   const links = navigationItems.map(item => {
@@ -60,9 +69,10 @@ const Navigation = () => {
     )
   })
 
+
   return (
     <div className={styles.navigation}>
-      <img src={logo} alt='logo' />
+      <Logo imgSrc={logo} text='Nathan' />
       <span>{links}</span>
       <span>{network}</span>
     </div>
