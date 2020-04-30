@@ -1,13 +1,13 @@
 .home {
+  animation: pageLoad 1s;
 
   .textArea {
     position: relative;
     z-index: 2;
-
     // Animation for text
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 4s steps(65, end),
+    animation: typing 4s steps(70, end),
     //  blink-caret 1s step-end infinite
      ;
 
@@ -29,8 +29,8 @@
 
 @keyframes pageLoad {
   from {
-      opacity: .5;
-      transform: scale3d(0.9, 0.9, 0.9);
+      opacity: 0.5;
+      transform: scale3d(0.5, 0.5, 0.5);
   }
   to {
       opacity: 1;
