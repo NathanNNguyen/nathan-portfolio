@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "nathan-portfolio",
+  "builds": [
+    {
+      "src": "/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "nathan-portfolio/$1"
+    }
+  ]
+}
