@@ -11,7 +11,7 @@ function About() {
           <div className={styles.summary}>
             <h2>About me</h2>
             <p className={styles.text}>
-              With a background of customer service, I'm looking to translate my customer relationship skills intomaking beautiful website for users.
+              With a background of customer service, I'm looking to translate my customer relationship skills into making beautiful website for users.
               </p>
             <p className={styles.text}>
               I was introduced to coding recently and immediately fell in love with it. I started learning about code at Lambda School in October of 2019 then I apllied to be a TL and have been working in that role since March of 2020.
