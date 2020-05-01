@@ -2,6 +2,8 @@
 
 A personal project to showcase my frontend skills using React (HTML/CSS/JavaScript)
 
+<a href='nate-nguyen.com' target="_blank" rel="noopener noreferrer">Live</a>
+
 ## Available Scripts
 
 In the project directory, you can run:
