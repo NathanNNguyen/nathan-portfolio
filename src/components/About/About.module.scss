@@ -32,3 +32,47 @@
       transform: scale3d(1, 1, 1);
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .about {
+    display: flex;
+    flex-direction: row;
+    padding: 10% 5%;
+    flex-wrap: wrap;
+
+    .textArea {
+      .summary{
+        font-size: 40px;
+      }
+
+      .text{
+        font-size: 30px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about {
+    .textArea{
+      .text {
+        font-size: 20px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .about {
+    padding: 3%;
+    .textArea{
+      .summary {
+        font-size: 30px;
+      }
+
+      .text {
+        font-size: 15px !important;
+      }
+    }
+  }
+}

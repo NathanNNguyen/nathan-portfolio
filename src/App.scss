@@ -18,3 +18,9 @@ code {
   display: flex;
   width: 100%;
 }
+
+@media only screen and (max-width: 1024px) {
+    .app {
+        flex-direction: column;
+    }
+}
