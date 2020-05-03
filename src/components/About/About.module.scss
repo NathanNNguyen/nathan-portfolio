@@ -1,5 +1,5 @@
 .about {
-  animation: pageLoad 1s;
+  animation: fade 1.5s ease forwards;
 
   .textArea {
     position: relative;
@@ -22,9 +22,9 @@
   }
 }
 
-@keyframes pageLoad {
+@keyframes fade {
   from {
-      opacity: 0.5;
+      opacity: 0;
       transform: scale3d(0.5, 0.5, 0.5);
   }
   to {
