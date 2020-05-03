@@ -41,19 +41,11 @@ const networks = [
   }
 ]
 
-const logos = [
-  {
-    icon: { logo },
-    text: 'Nathan',
-    route: '/'
-  }
-]
-
 const Navigation = () => {
 
   const links = navigationItems.map(item => {
     return (
-      <NavLink to={item.route} className={styles.link}>
+      <NavLink to={item.route} className={styles.link} key={item.icon}>
         <i className={item.icon} />
         <span>{item.text}</span>
       </NavLink>
@@ -62,7 +54,7 @@ const Navigation = () => {
 
   const network = networks.map(item => {
     return (
-      <a href={item.link} target="_blank" rel="noopener noreferrer">
+      <a href={item.link} target="_blank" rel="noopener noreferrer" key={item.icon}>
         <i className={item.icon} />
         <span>{item.text}</span>
       </a>
