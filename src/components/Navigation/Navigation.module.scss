@@ -12,17 +12,17 @@
     margin-top: 10px;
   }
 
-  a {
-    display: block;
-    color: rgba(255, 255, 255, .8);
-    font-size: 20px;
-    height: 60px;
-    width: 60px;
-    position: relative;
-
-    span,
-    i, 
     a {
+      display: block;
+      color: rgba(255, 255, 255, .8);
+      font-size: 20px;
+      height: 60px;
+      width: 60px;
+      position: relative;
+      
+      span,
+      i, 
+      a {
         display: block;
         position: absolute;
         width: 100%;
@@ -32,29 +32,29 @@
         text-align: center;
         text-transform: uppercase;
         transition: all 0.3s ease-out;
-    }
-
-    span {
+      }
+      
+      span {
         font-size: 10px;
         opacity: 0;
-    }
-
-    &:hover,
-    &:active {
-      color: rgba(255, 255, 255, .8);
-    }
-
-    &:hover {
+      }
+      
+      &:hover,
+      &:active {
+        color: rgba(255, 255, 255, .8);
+      }
+      
+      &:hover {
         i {
-            opacity: 0;
+          opacity: 0;
         }
-
+        
         span {
-            opacity: 1;
+          opacity: 1;
         }
+      }
     }
-  }
-
+    
   button {
     display: none;
   }
@@ -66,5 +66,33 @@
     width: 100%;
     height: 80px;
     justify-content: space-between;
+
+    a {
+      margin: 10px;
+      font-size: 25px;
+    }
+    
+    span {
+      display: flex;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    
+    a {
+      font-size: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .navigation {
+
+    a {
+      font-size: 15px;
+      margin: 0;
+    }
   }
 }

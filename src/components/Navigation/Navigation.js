@@ -67,9 +67,6 @@ const Navigation = () => {
       <Logo imgSrc={logo} text='Nathan' />
       <span>{links}</span>
       <span>{network}</span>
-      <button>
-        <i className="fas fa-bars" />
-      </button>
     </div>
   );
 }
