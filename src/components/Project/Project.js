@@ -25,11 +25,11 @@ function Project() {
                 <p>{project.desc}</p>
                 <div className={styles.links}>
                   <a href={project.live} target='_blank' rel='noopener noreferrer'>
-                    <i class="fas fa-eye"></i>
+                    <i className="fas fa-eye"></i>
                     <span>Live</span>
                   </a>
                   <a href={project.github} target='_blank' rel='noopener noreferrer'>
-                    <i class="fas fa-code"></i>
+                    <i className="fas fa-code"></i>
                     <span>Github</span>
                   </a>
                 </div>

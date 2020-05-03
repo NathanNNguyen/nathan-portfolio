@@ -54,7 +54,7 @@ const Navigation = () => {
 
   const network = networks.map(item => {
     return (
-      <a href={item.link} target="_blank" rel="noopener noreferrer" key={item.icon}>
+      <a href={item.link} target="_blank" rel="noopener noreferrer" key={item.icon} className={styles.network}>
         <i className={item.icon} />
         <span>{item.text}</span>
       </a>
@@ -67,6 +67,9 @@ const Navigation = () => {
       <Logo imgSrc={logo} text='Nathan' />
       <span>{links}</span>
       <span>{network}</span>
+      <button>
+        <i className="fas fa-bars" />
+      </button>
     </div>
   );
 }

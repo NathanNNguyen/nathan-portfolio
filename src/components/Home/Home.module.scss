@@ -47,3 +47,44 @@
   from, to { border-color: transparent }
   100% { border-color: transparent; }
 }
+
+@media only screen and (max-width: 1024px) {
+  .home {
+    display: flex;
+    flex-direction: row;
+    padding: 10% 5%;
+    flex-wrap: wrap;
+
+    .textArea {
+      white-space: unset;
+      animation: none;
+      .summary {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .home {
+
+    .textArea {
+
+      .summary {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .home {
+
+    .textArea {
+
+      .summary {
+        font-size: 20px;
+      }
+    }
+  }
+}
