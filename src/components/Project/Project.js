@@ -2,7 +2,7 @@ import React from 'react';
 import Wrapper from '../Wrapper/Wrapper.js';
 import covidImg from '../../assets/images/covid-tracker.png';
 import domImg from '../../assets/images/dom-game.png';
-import nasaImg from '../../assets/images/nasa.png';
+import moviesImg from '../../assets/images/movies.png';
 import natoursImg from '../../assets/images/natours.png';
 import omnifoodImg from '../../assets/images/omnifood.png';
 import wljImg from '../../assets/images/wlj.png';
@@ -67,11 +67,11 @@ const projects = [
     desc: 'A simple project to showcase front-end skills, implemented with lots of animations (HTML / CSS)'
   },
   {
-    name: 'Nasa Photo of The Day',
-    github: 'https://github.com/NathanNNguyen/nasa-photo-of-the-day',
-    live: 'https://nn-nasa.netlify.app/',
-    img: nasaImg,
-    desc: 'A web app that allows users to see everyday photo of nasa including description for each photo (React)'
+    name: 'Movies API',
+    github: 'https://github.com/NathanNNguyen/movies',
+    live: 'https://nn-movies.now.sh/',
+    img: moviesImg,
+    desc: 'An app that allows users to search for movies and see informations about those movies (React)'
   },
 
   {
