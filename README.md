@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-A personal project to showcase my frontend skills using React (HTML/CSS/JavaScript)
+A personal porfolio made with React.
 
 <a href='https://nate-nguyen.com/' target="_blank" rel="noopener noreferrer">Live</a>
 
