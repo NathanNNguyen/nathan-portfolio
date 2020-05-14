@@ -71,7 +71,7 @@ const projects = [
     github: 'https://github.com/NathanNNguyen/movies',
     live: 'https://nn-movies.now.sh/',
     img: moviesImg,
-    desc: 'An app that allows users to search for movies and see informations about those movies (React)'
+    desc: 'An app that allows users to search for movies and see informations about those movies (React / Redux)'
   },
 
   {
