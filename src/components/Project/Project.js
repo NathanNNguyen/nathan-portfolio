@@ -4,7 +4,7 @@ import budget from '../../assets/images/budget.png';
 import domImg from '../../assets/images/dom-game.png';
 import moviesImg from '../../assets/images/movies.png';
 import natoursImg from '../../assets/images/natours.png';
-import omnifoodImg from '../../assets/images/omnifood.png';
+import recipes from '../../assets/images/recipes.png';
 import wljImg from '../../assets/images/wlj.png';
 
 import styles from './Project.module.scss';
@@ -60,11 +60,11 @@ const projects = [
     desc: 'A simple expense tracker that allows user to track their expenses, data persists to local storage in need of keep using the app (React / Redux hook)'
   },
   {
-    name: 'Natours',
-    github: 'https://github.com/NathanNNguyen/natours',
-    live: 'https://nn-natours.netlify.app/',
-    img: natoursImg,
-    desc: 'A simple project to showcase front-end skills, implemented with lots of animations (HTML / CSS)'
+    name: 'Recipes Database',
+    github: 'https://github.com/NathanNNguyen/food',
+    live: 'https://recipes-db.now.sh/',
+    img: recipes,
+    desc: 'A simple project that let users search for any recipe of their choice (React)'
   },
   {
     name: 'Movies API',
@@ -73,12 +73,11 @@ const projects = [
     img: moviesImg,
     desc: 'An app that allows users to search for movies and see informations about those movies (React / Redux)'
   },
-
   {
-    name: 'Omnifood',
-    github: 'https://github.com/NathanNNguyen/Omnifood',
-    live: 'https://nn-omnifood.now.sh/',
-    img: omnifoodImg,
+    name: 'Natours',
+    github: 'https://github.com/NathanNNguyen/natours',
+    live: 'https://nn-natours.netlify.app/',
+    img: natoursImg,
     desc: 'A simple project to showcase front-end skills, implemented with lots of animations (HTML / CSS)'
   },
   {
