@@ -1,6 +1,6 @@
 import React from 'react';
 import Wrapper from '../Wrapper/Wrapper.js';
-import covidImg from '../../assets/images/covid-tracker.png';
+import budget from '../../assets/images/budget.png';
 import domImg from '../../assets/images/dom-game.png';
 import moviesImg from '../../assets/images/movies.png';
 import natoursImg from '../../assets/images/natours.png';
@@ -53,11 +53,11 @@ const projects = [
     desc: 'An app that allows users to keep track of their personal workout routine. Users can update their journal if needed (React / Redux)'
   },
   {
-    name: 'Covid-19 Tracker',
-    github: 'https://github.com/NathanNNguyen/covid-tracker',
-    live: 'https://nn-covid-tracker.now.sh/',
-    img: covidImg,
-    desc: 'An app that allows users to track real time data of COVID-19. Users can track whether it is global or countries based data (React)'
+    name: 'Budget Tracker',
+    github: 'https://github.com/NathanNNguyen/budget',
+    live: 'https://nn-budget-tracker.now.sh',
+    img: budget,
+    desc: 'A simple expense tracker that allows user to track their expenses, data persists to local storage in need of keep using the app (React / Redux hook)'
   },
   {
     name: 'Natours',
