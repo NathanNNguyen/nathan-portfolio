@@ -35,7 +35,6 @@
       top: 0;
       left: 0;
       transform: rotateY(0);
-      z-index: 1;
 
       &:hover {
         transform: rotateY(180deg);
@@ -94,7 +93,6 @@
           span {
             font-size: 15px;
             opacity: 0;
-          
           }
           &:active,
           &:visited {
